@@ -105,14 +105,32 @@ export default function Navbar({ onOpenDonations }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-[#0A111F]/98 backdrop-blur-xl flex flex-col justify-between p-6 pt-24 lg:hidden"
+            className="fixed inset-0 z-50 bg-[#0A111F] flex flex-col justify-between p-6 pt-20 overflow-y-auto lg:hidden"
           >
-            <div className="flex flex-col gap-4 text-center">
-              <div className="w-14 h-14 mx-auto rounded-xl bg-[#42A5F5] flex items-center justify-center text-[#0A111F] shadow-lg mb-2">
-                <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-                </svg>
+            {/* Mobile Drawer Close Header */}
+            <div className="flex items-center justify-between pb-4 border-b border-[#1E2F52] mb-4">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg overflow-hidden border border-[#1E2F52]">
+                  <img
+                    src="assets/icons/ic_hamster_gris.jpg"
+                    alt="HamsterPlayer"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="font-extrabold text-white text-base tracking-tight">
+                  HamsterPlayer
+                </span>
               </div>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition"
+                aria-label="Cerrar menú"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-3 text-center my-auto py-4">
 
               {navLinks.map((link) => (
                 <a

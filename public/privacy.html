@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - HamsterPlayer</title>
+  <meta name="description" content="Política de privacidad oficial y términos de uso de datos de HamsterPlayer para Android.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A111F;
+      --card: #121E36;
+      --border: #1E2F52;
+      --accent: #42A5F5;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    strong { color: #fff; }
+    ul { margin-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .back-btn:hover { text-decoration: underline; }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back-btn">&larr; Volver a HamsterPlayer</a>
+    <span class="badge">Documento Oficial de Privacidad</span>
+    <h1>Política de Privacidad de HamsterPlayer</h1>
+    <p><strong>Última actualización:</strong> 9 de Septiembre de 2026</p>
+
+    <h2>1. Introducción y Filosofía</h2>
+    <p>HamsterPlayer es una aplicación de reproducción de música desarrollada de forma independiente por David para dispositivos Android. Nuestra filosofía primordial es respetar la privacidad y seguridad de nuestros usuarios: tu música, tus archivos locales y tus datos te pertenecen únicamente a ti.</p>
+
+    <h2>2. Datos de Usuario de Google (Google OAuth)</h2>
+    <p>Cuando decides iniciar sesión utilizando tu cuenta de Google mediante Google OAuth (a través de nuestro servicio de autenticación seguro en Supabase), únicamente solicitamos los permisos básicos y no sensibles siguientes:</p>
+    <ul>
+      <li><strong>Identificador único de usuario (OpenID):</strong> Para verificar tu identidad y mantener tu sesión activa de manera segura.</li>
+      <li><strong>Dirección de correo electrónico:</strong> Para asociar tu cuenta de usuario y permitirte recuperar el acceso.</li>
+      <li><strong>Nombre de perfil y foto pública:</strong> Para mostrar tu nombre y avatar en tus salas de escucha compartida y perfil dentro de la aplicación.</li>
+    </ul>
+    <p><strong>Declaración de cumplimiento con la Política de Datos del Usuario de Servicios de API de Google:</strong></p>
+    <p>El uso y la transferencia que hace HamsterPlayer a cualquier otra aplicación de la información recibida de las API de Google cumplirán con la <em>Política de Datos del Usuario de los Servicios de las API de Google</em>, incluidos los requisitos de Uso Limitado.</p>
+
+    <h2>3. Uso, Almacenamiento y No Comercialización de Datos</h2>
+    <ul>
+      <li><strong>No vendemos datos:</strong> Nunca vendemos, alquilamos ni comercializamos tu información personal o datos de Google con terceros, empresas publicitarias ni intermediarios de datos.</li>
+      <li><strong>Sin publicidad invasiva:</strong> La aplicación no contiene redes de anuncios de terceros ni rastreadores de comportamiento.</li>
+      <li><strong>Cifrado E2EE:</strong> Las comunicaciones en salas y mensajes directos están cifradas de extremo a extremo utilizando AES-256-GCM.</li>
+    </ul>
+
+    <h2>4. Permisos del Dispositivo en Android</h2>
+    <p>HamsterPlayer solicita acceso a permisos locales estrictamente necesarios para el funcionamiento del reproductor de audio:</p>
+    <ul>
+      <li><strong>Acceso a Archivos de Audio / Almacenamiento:</strong> Únicamente para indexar y reproducir tus canciones locales, leer etiquetas ID3 y archivos de letras (.lrc). Estos datos nunca son subidos a ningún servidor externo.</li>
+      <li><strong>Servicio en Primer Plano (Foreground Service / Notificación):</strong> Para mantener la reproducción de música activa y mostrar los controles multimedia mientras usas otras aplicaciones o con la pantalla apagada.</li>
+      <li><strong>Bluetooth y Modificación de Audio:</strong> Para la conexión con auriculares y el funcionamiento del ecualizador DSP y calibración de volumen.</li>
+    </ul>
+
+    <h2>5. Retención y Eliminación de Datos</h2>
+    <p>Tus datos de cuenta se conservan únicamente mientras mantengas activa tu cuenta en HamsterPlayer. Si deseas eliminar tu cuenta y todos los datos asociados de forma permanente, puedes hacerlo directamente desde el menú <em>Ajustes &gt; Eliminar Cuenta</em> dentro de la aplicación o contactándonos por correo electrónico.</p>
+
+    <h2>6. Contacto</h2>
+    <p>Si tienes cualquier duda, solicitud o pregunta relacionada con esta Política de Privacidad o el tratamiento de tus datos, puedes ponerte en contacto con el desarrollador responsable:</p>
+    <p><strong>Desarrollador:</strong> David<br>
+    <strong>Proyecto:</strong> HamsterPlayer Android<br>
+    <strong>Sitio Web:</strong> <a href="https://hamsterplayer-web.vercel.app/" style="color: var(--accent);">https://hamsterplayer-web.vercel.app/</a></p>
+
+    <footer>
+      &copy; 2026 HamsterPlayer · Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>

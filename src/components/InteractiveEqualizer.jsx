@@ -78,7 +78,7 @@ export default function InteractiveEqualizer() {
           </p>
         </div>
 
-        <div className="bg-[#121E36] rounded-2xl p-6 sm:p-10 border border-[#1E2F52] shadow-xl relative overflow-hidden">
+        <div className="bg-[#121E36] rounded-2xl p-4 sm:p-10 border border-[#1E2F52] shadow-xl relative overflow-hidden">
           
           {/* Preset Buttons */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-8 pb-6 border-b border-[#1E2F52]">
@@ -165,15 +165,15 @@ export default function InteractiveEqualizer() {
             </div>
           </div>
 
-          {/* 10 Slider Slits */}
-          <div className="grid grid-cols-5 sm:grid-cols-10 gap-3 sm:gap-2 mb-8">
+          {/* 10 Slider Slits - Swipeable on mobile, grid on desktop */}
+          <div className="flex sm:grid sm:grid-cols-10 gap-3 sm:gap-2 mb-8 overflow-x-auto pb-4 pt-2 scrollbar-none w-full max-w-full">
             {BANDS.map((b, i) => (
-              <div key={b.key} className="flex flex-col items-center gap-2">
+              <div key={b.key} className="flex-shrink-0 flex flex-col items-center gap-2 min-w-[54px] sm:min-w-0">
                 <span className="text-[11px] font-mono font-bold text-[#42A5F5]">
                   {values[i] > 0 ? `+${values[i]}` : values[i]} dB
                 </span>
 
-                <div className="relative h-44 w-7 bg-[#0A111F] rounded-full flex items-center justify-center p-1 border border-[#1E2F52]">
+                <div className="relative h-44 w-7 bg-[#0A111F] rounded-full flex items-center justify-center p-1 border border-[#1E2F52] overflow-hidden">
                   <input
                     type="range"
                     min="-12"

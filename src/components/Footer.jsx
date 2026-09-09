@@ -24,14 +24,14 @@ export default function Footer() {
         </div>
 
         {/* Developer Attribution */}
-        <p className="text-xs text-slate-400 text-center flex items-center gap-1.5">
+        <p className="text-xs text-slate-400 text-center flex flex-wrap items-center justify-center gap-1.5 px-2">
           <span>Desarrollado de forma independiente por</span>
           <strong className="text-white font-semibold">David</strong>
           <span>para quienes aman la música · &copy; 2026</span>
         </p>
 
         {/* Quick Links */}
-        <div className="flex items-center gap-6 text-xs font-medium text-slate-300">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 text-xs font-medium text-slate-300 w-full md:w-auto px-2">
           <a href="#features" className="hover:text-[#42A5F5] transition">Funciones</a>
           <a href="#player" className="hover:text-[#42A5F5] transition">Reproductor</a>
           <a href="#equalizer" className="hover:text-[#42A5F5] transition">Ecualizador</a>

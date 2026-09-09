@@ -25,12 +25,12 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-200 relative selection:bg-[#42A5F5]/30 selection:text-white font-sans">
+    <div className="min-h-screen bg-[#0A111F] text-slate-200 relative selection:bg-[#42A5F5]/30 selection:text-white font-sans overflow-x-hidden w-full max-w-full">
       {/* Top Navbar */}
       <Navbar onOpenDonations={() => triggerToast('Abriendo sección de donaciones...')} />
 
       {/* Main Sections */}
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full overflow-x-hidden">
         <Hero />
         <FeaturesGrid />
         <InteractivePlayer />

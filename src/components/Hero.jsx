@@ -21,23 +21,23 @@ export default function Hero() {
             </p>
 
             {/* Main Headline - Solid Pure White */}
-            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6">
+            <h1 className="text-3xl sm:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.15] mb-6 break-words">
               Tu música.<br />
               Sin limitaciones.<br />
               Con fidelidad pura.
             </h1>
 
             {/* Subheading */}
-            <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="text-sm sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
               Diseñado desde cero para Android con arquitectura de audio bit-perfect. Ecualizador DSP de 10 bandas, letras sincronizadas en tiempo real, salas compartidas de baja latencia y mensajería E2EE cifrada con AES-256-GCM.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-stretch sm:items-center w-full max-w-md mx-auto lg:mx-0">
               <a
                 href="assets/app-release.apk"
                 download
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#42A5F5] hover:bg-[#64B5F6] text-[#0A111F] font-black text-base shadow-lg shadow-[#42A5F5]/10 hover:shadow-[#42A5F5]/20 hover:scale-[1.02] active:scale-98 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-[#42A5F5] hover:bg-[#64B5F6] text-[#0A111F] font-black text-sm sm:text-base shadow-lg shadow-[#42A5F5]/10 hover:shadow-[#42A5F5]/20 hover:scale-[1.02] active:scale-98 transition-all"
               >
                 <Download className="w-5 h-5 stroke-[2.5]" />
                 <span>Descargar APK — 23.5 MB</span>
@@ -45,7 +45,7 @@ export default function Hero() {
 
               <a
                 href="#player"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#121E36] border border-[#1E2F52] hover:bg-[#162544] text-white font-semibold text-base transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-[#121E36] border border-[#1E2F52] hover:bg-[#162544] text-white font-semibold text-sm sm:text-base transition-all"
               >
                 <Play className="w-4 h-4 text-[#42A5F5] fill-[#42A5F5]" />
                 <span>Probar Reproductor</span>
