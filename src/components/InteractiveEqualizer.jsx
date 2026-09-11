@@ -1,6 +1,112 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Sliders, Sparkles, Volume2, RotateCcw } from 'lucide-react'
 import { motion } from 'framer-motion'
+
+function VerticalEqSlider({ value, min = -12, max = 12, step = 0.5, onChange, label }) {
+  const trackRef = useRef(null)
+  const isDraggingRef = useRef(false)
+
+  // Calculate percentage [0, 100] from value [min, max]
+  const percent = Math.max(0, Math.min(100, ((value - min) / (max - min)) * 100))
+  const zeroPercent = 50 // 0 dB is at center
+
+  const updateFromPointer = (clientY) => {
+    if (!trackRef.current) return
+    const rect = trackRef.current.getBoundingClientRect()
+    // 0 at bottom, 1 at top
+    const ratio = 1 - (clientY - rect.top) / rect.height
+    const clampedRatio = Math.max(0, Math.min(1, ratio))
+    let rawVal = min + clampedRatio * (max - min)
+    if (step) {
+      rawVal = Math.round(rawVal / step) * step
+    }
+    rawVal = Math.round(rawVal * 10) / 10
+    onChange(rawVal)
+  }
+
+  const handlePointerDown = (e) => {
+    isDraggingRef.current = true
+    e.currentTarget.setPointerCapture(e.pointerId)
+    updateFromPointer(e.clientY)
+  }
+
+  const handlePointerMove = (e) => {
+    if (!isDraggingRef.current) return
+    updateFromPointer(e.clientY)
+  }
+
+  const handlePointerUp = (e) => {
+    isDraggingRef.current = false
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId)
+    } catch (_) {}
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+      e.preventDefault()
+      onChange(Math.min(max, value + (step || 1)))
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') {
+      e.preventDefault()
+      onChange(Math.max(min, value - (step || 1)))
+    }
+  }
+
+  return (
+    <div
+      ref={trackRef}
+      role="slider"
+      tabIndex={0}
+      aria-label={label}
+      aria-valuenow={value}
+      aria-valuemin={min}
+      aria-valuemax={max}
+      aria-orientation="vertical"
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+      onKeyDown={handleKeyDown}
+      className="relative h-44 w-8 sm:w-8 bg-[#0A111F] rounded-full border border-[#1E2F52] flex items-center justify-center cursor-pointer select-none touch-none hover:border-[#42A5F5]/60 transition-colors"
+      style={{ touchAction: 'none' }}
+    >
+      {/* Background track vertical groove */}
+      <div className="absolute top-3 bottom-3 w-1.5 bg-[#162544] rounded-full pointer-events-none" />
+
+      {/* 0dB Center reference mark */}
+      <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-slate-500/30 pointer-events-none -translate-y-1/2" />
+
+      {/* Active Fill from 0dB (center) to current position */}
+      {percent >= zeroPercent ? (
+        <div
+          className="absolute w-1.5 bg-gradient-to-t from-[#42A5F5]/50 to-[#42A5F5] rounded-full pointer-events-none"
+          style={{
+            bottom: `${zeroPercent}%`,
+            height: `${percent - zeroPercent}%`
+          }}
+        />
+      ) : (
+        <div
+          className="absolute w-1.5 bg-gradient-to-b from-[#42A5F5]/50 to-[#42A5F5] rounded-full pointer-events-none"
+          style={{
+            top: `${100 - zeroPercent}%`,
+            height: `${zeroPercent - percent}%`
+          }}
+        />
+      )}
+
+      {/* Vertical Slider Thumb Knob */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#42A5F5] shadow-lg shadow-[#42A5F5]/50 border-2 border-white flex items-center justify-center pointer-events-none transition-transform active:scale-110"
+        style={{
+          bottom: `calc(${percent}% - 12px)`
+        }}
+      >
+        <div className="w-1.5 h-1.5 rounded-full bg-[#0A111F]" />
+      </div>
+    </div>
+  )
+}
 
 const BANDS = [
   { label: '31 Hz', key: 'b31' },
@@ -173,19 +279,14 @@ export default function InteractiveEqualizer() {
                   {values[i] > 0 ? `+${values[i]}` : values[i]} dB
                 </span>
 
-                <div className="relative h-44 w-7 bg-[#0A111F] rounded-full flex items-center justify-center p-1 border border-[#1E2F52] overflow-hidden">
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="0.5"
-                    value={values[i]}
-                    onChange={(e) => handleSliderChange(i, e.target.value)}
-                    className="w-36 -rotate-90 origin-center cursor-pointer accent-[#42A5F5] bg-transparent"
-                    style={{ WebkitAppearance: 'slider-vertical' }}
-                    aria-label={b.label}
-                  />
-                </div>
+                <VerticalEqSlider
+                  value={values[i]}
+                  min={-12}
+                  max={12}
+                  step={0.5}
+                  onChange={(val) => handleSliderChange(i, val)}
+                  label={b.label}
+                />
 
                 <span className="text-[10px] font-medium text-slate-400 font-mono mt-1 text-center">
                   {b.label}
