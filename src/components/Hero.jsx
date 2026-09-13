@@ -17,7 +17,7 @@ export default function Hero() {
           >
             {/* Direct Category Label - No bubble */}
             <p className="text-xs font-bold uppercase tracking-widest text-[#42A5F5] mb-4">
-              HamsterPlayer · 100% Offline · Sin Anuncios
+              HamsterPlayer · Arquitectura Offline-First · Sin Anuncios
             </p>
 
             {/* Main Headline - Solid Pure White */}

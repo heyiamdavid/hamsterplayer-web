@@ -46,8 +46,8 @@ const FEATURES = [
   },
   {
     icon: Shield,
-    title: '100% Privado y Offline',
-    desc: 'Tus canciones y listas nunca salen de tu teléfono. Sin cuentas obligatorias, sin telemetría ni rastreo de hábitos de reproducción.',
+    title: 'Offline-First y Privado',
+    desc: 'Toda tu música local, letras sincronizadas y ecualizador DSP funcionan 100% sin conexión. Sin cuentas obligatorias ni telemetría; funciones sociales en la nube totalmente opcionales.',
     badge: 'Cero Telemetría',
   },
 ]

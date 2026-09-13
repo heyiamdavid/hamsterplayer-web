@@ -17,7 +17,7 @@ export default function PrivacySection() {
             Tu música es de tu propiedad exclusiva
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-lg mx-auto">
-            HamsterPlayer funciona 100% de forma local y offline. Ningún archivo ni metadato musical sale de tu teléfono sin tu autorización.
+            HamsterPlayer está diseñado con filosofía Offline-First. Toda tu biblioteca, ecualizador y letras funcionan de manera 100% local; las funciones comunitarias y de sincronización en la nube son totalmente opcionales.
           </p>
         </div>
 
