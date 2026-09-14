@@ -30,6 +30,13 @@ const releaseHistory = [
         color: 'text-purple-400 bg-purple-400/10 border-purple-400/30',
         title: 'Foto de Perfil Reactiva',
         desc: 'Actualización instantánea del avatar en la cabecera de la Biblioteca al modificar o subir una nueva foto de perfil sin reiniciar la app.'
+      },
+      {
+        category: 'Letras & Reproductor',
+        icon: Music,
+        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
+        title: 'Sincronización Total de Letras y Traductor',
+        desc: 'Corrección de sincronización reactiva entre el reproductor y el widget, eliminación de letras repetidas de pistas previas y botón de traducir blindado.'
       }
     ]
   },
