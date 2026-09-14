@@ -36,6 +36,7 @@ export default function Navbar({ onOpenDonations }) {
     { name: 'Capturas', href: '#screenshots' },
     { name: 'Temas', href: '#themes' },
     { name: 'Privacidad', href: '#privacy' },
+    { name: 'Novedades', href: '#changelog' },
   ]
 
   return (

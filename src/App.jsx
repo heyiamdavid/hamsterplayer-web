@@ -10,6 +10,7 @@ import InteractiveEqualizer from './components/InteractiveEqualizer.jsx'
 import AppScreenshots from './components/AppScreenshots.jsx'
 import ThemesAndIcons from './components/ThemesAndIcons.jsx'
 import PrivacySection from './components/PrivacySection.jsx'
+import VersionChangelog from './components/VersionChangelog.jsx'
 import DonationsSection from './components/DonationsSection.jsx'
 import DownloadCTA from './components/DownloadCTA.jsx'
 import Footer from './components/Footer.jsx'
@@ -38,6 +39,7 @@ export default function App() {
         <AppScreenshots />
         <ThemesAndIcons />
         <PrivacySection />
+        <VersionChangelog />
         <DonationsSection onShowToast={triggerToast} />
         <DownloadCTA onDownloadClick={() => triggerToast('¡Iniciando descarga de HamsterPlayer APK!')} />
       </main>

@@ -15,10 +15,12 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 text-center lg:text-left"
           >
-            {/* Direct Category Label - No bubble */}
-            <p className="text-xs font-bold uppercase tracking-widest text-[#42A5F5] mb-4">
-              HamsterPlayer · Arquitectura Offline-First · Sin Anuncios
-            </p>
+            {/* Direct Category Label */}
+            <div className="flex flex-wrap items-center gap-3 mb-4 justify-center lg:justify-start">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#42A5F5]">
+                HamsterPlayer · Arquitectura Offline-First · Sin Anuncios
+              </p>
+            </div>
 
             {/* Main Headline - Solid Pure White */}
             <h1 className="text-3xl sm:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.15] mb-6 break-words">
@@ -40,7 +42,7 @@ export default function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-[#42A5F5] hover:bg-[#64B5F6] text-[#0A111F] font-black text-sm sm:text-base shadow-lg shadow-[#42A5F5]/10 hover:shadow-[#42A5F5]/20 hover:scale-[1.02] active:scale-98 transition-all"
               >
                 <Download className="w-5 h-5 stroke-[2.5]" />
-                <span>Descargar APK — 23.5 MB</span>
+                <span>Descargar APK Oficial — 23.5 MB</span>
               </a>
 
               <a

@@ -8,9 +8,11 @@ export default function DownloadCTA({ onDownloadClick }) {
         <div className="bg-[#121E36] rounded-2xl p-8 sm:p-14 text-center relative overflow-hidden border border-[#1E2F52] shadow-xl">
           
           <div className="relative z-10">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#42A5F5] mb-3">
-              Descarga Oficial Directa
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#42A5F5]">
+                Descarga Oficial Directa
+              </p>
+            </div>
 
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
               Comienza a escuchar en alta fidelidad
