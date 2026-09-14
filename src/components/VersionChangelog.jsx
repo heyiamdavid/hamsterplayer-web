@@ -4,9 +4,39 @@ import { Sparkles, Zap, Shield, Radio, Music, MessageCircle, ChevronDown, CheckC
 
 const releaseHistory = [
   {
-    version: 'v2.5.5',
+    version: 'v2.5.6',
     tag: 'Última Versión',
     isLatest: true,
+    releaseDate: 'Septiembre 2026',
+    summary: 'Eliminación definitiva de mensajes y chats con lápidas persistentes, visualización de música en vivo en información de contacto y avatar reactivo en Biblioteca.',
+    highlights: [
+      {
+        category: 'Mensajería & Chats',
+        icon: MessageCircle,
+        color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
+        title: 'Persistencia y Eliminación Limpia',
+        desc: 'Lápidas locales en disco y filtrado en tiempo real que evitan que mensajes o conversaciones eliminadas reaparezcan al reabrir el chat.'
+      },
+      {
+        category: 'Social & Perfiles',
+        icon: Radio,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: 'Música en Vivo en Perfil de Contacto',
+        desc: 'Tarjeta de actividad musical en tiempo real ("Escuchando en vivo" y "Canción destacada") en la modal de información de usuario y sección de chats.'
+      },
+      {
+        category: 'Interfaz & Biblioteca',
+        icon: Sparkles,
+        color: 'text-purple-400 bg-purple-400/10 border-purple-400/30',
+        title: 'Foto de Perfil Reactiva',
+        desc: 'Actualización instantánea del avatar en la cabecera de la Biblioteca al modificar o subir una nueva foto de perfil sin reiniciar la app.'
+      }
+    ]
+  },
+  {
+    version: 'v2.5.5',
+    tag: 'Estable',
+    isLatest: false,
     releaseDate: 'Septiembre 2026',
     summary: 'Salas de escucha grupal en tiempo real, validación anti-salas duplicadas, playlists O(1) sin trabas, confirmación de lectura con doble check y temporizador de apagado perfeccionado.',
     highlights: [
@@ -133,7 +163,7 @@ const releaseHistory = [
 ]
 
 export default function VersionChangelog() {
-  const [activeVersion, setActiveVersion] = useState('v2.5.5')
+  const [activeVersion, setActiveVersion] = useState('v2.5.6')
 
   const current = releaseHistory.find((r) => r.version === activeVersion) || releaseHistory[0]
 
@@ -260,7 +290,7 @@ export default function VersionChangelog() {
                 <span>Compatibilidad probada desde Android 7.0 (Nougat) hasta Android 16</span>
               </div>
               <div className="font-mono text-slate-400">
-                Compilación: <span className="text-[#42A5F5]">release-v2.5.5-signed</span>
+                Compilación: <span className="text-[#42A5F5]">release-v2.5.6-signed</span>
               </div>
             </div>
 
