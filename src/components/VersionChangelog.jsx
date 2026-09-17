@@ -4,9 +4,46 @@ import { Sparkles, Zap, Shield, Radio, Music, MessageCircle, ChevronDown, CheckC
 
 const releaseHistory = [
   {
-    version: 'v2.5.6',
+    version: 'v2.5.7',
     tag: 'Última Versión',
     isLatest: true,
+    releaseDate: 'Septiembre 2026',
+    summary: 'Identificación visual de modos y presets en Ecualizador DSP y MSEB, iconos para ajustes acústicos, 0 retraso al alternar pestañas en reproducción, cabeceras redondeadas en todas las pantallas y sustitución completa de emojis por iconos vectoriales.',
+    highlights: [
+      {
+        category: 'Audio DSP & Ecualizador',
+        icon: Zap,
+        color: 'text-rose-400 bg-rose-400/10 border-rose-400/30',
+        title: 'Modos y Presets Identificados en MSEB',
+        desc: 'Indicación clara en cabecera del modo DSP activo, selección resaltada con check en presets de MSEB y 10 nuevos iconos temáticos para cada ajuste acústico.'
+      },
+      {
+        category: 'Rendimiento & Fluidez',
+        icon: Sparkles,
+        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
+        title: 'Transición Instantánea de Pestañas',
+        desc: 'Aislamiento reactivo de la posición de reproducción y optimización de animaciones, eliminando cualquier retraso o sensación de lentitud al navegar mientras suena música.'
+      },
+      {
+        category: 'Diseño & Estilo',
+        icon: Shield,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: 'Cabeceras Redondeadas e Iconos Vectoriales',
+        desc: 'Estandarización de cabeceras curvas en Playlists Compartidas, Letras de la Comunidad y Ajustes. Eliminación de emojis en toda la app y la web de transferencia WiFi.'
+      },
+      {
+        category: 'Diagnóstico & Hardware',
+        icon: Music,
+        color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
+        title: 'Salida de Audio y DSP Hardware',
+        desc: 'Reintegración de la información de capacidades de audio del sistema (10 bandas DSP, Bass Boost, Surround 3D, Loudness Enhancer y PCM Float de 32 bits).'
+      }
+    ]
+  },
+  {
+    version: 'v2.5.6',
+    tag: 'Estable',
+    isLatest: false,
     releaseDate: 'Septiembre 2026',
     summary: 'Eliminación definitiva de mensajes y chats con lápidas persistentes, visualización de música en vivo en información de contacto y avatar reactivo en Biblioteca.',
     highlights: [
@@ -170,7 +207,7 @@ const releaseHistory = [
 ]
 
 export default function VersionChangelog() {
-  const [activeVersion, setActiveVersion] = useState('v2.5.6')
+  const [activeVersion, setActiveVersion] = useState('v2.5.7')
 
   const current = releaseHistory.find((r) => r.version === activeVersion) || releaseHistory[0]
 
@@ -297,7 +334,7 @@ export default function VersionChangelog() {
                 <span>Compatibilidad probada desde Android 7.0 (Nougat) hasta Android 16</span>
               </div>
               <div className="font-mono text-slate-400">
-                Compilación: <span className="text-[#42A5F5]">release-v2.5.6-signed</span>
+                Compilación: <span className="text-[#42A5F5]">release-v2.5.7-signed</span>
               </div>
             </div>
 
