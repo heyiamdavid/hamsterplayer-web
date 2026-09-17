@@ -4,9 +4,46 @@ import { Sparkles, Zap, Shield, Radio, Music, MessageCircle, ChevronDown, CheckC
 
 const releaseHistory = [
   {
-    version: 'v2.5.7',
+    version: 'v2.5.8',
     tag: 'Última Versión',
     isLatest: true,
+    releaseDate: 'Septiembre 2026',
+    summary: 'Soporte completo de escaneo e indexación en biblioteca para canciones transferidas por WiFi, contador en vivo de archivos pasados en la sesión, mejoras de persistencia y optimización general.',
+    highlights: [
+      {
+        category: 'Transferencia WiFi',
+        icon: Radio,
+        color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
+        title: 'Indexación Automática en Biblioteca',
+        desc: 'Escáner directo multicarpeta para todos los formatos de audio en carpetas de transferencia, con extracción de metadatos ID3 y sincronización inmediata con la base de datos local.'
+      },
+      {
+        category: 'Transferencia WiFi',
+        icon: Sparkles,
+        color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
+        title: 'Contador de Sesión en Tiempo Real',
+        desc: 'Indicador visual interactivo que muestra cuántas canciones se han transferido en la sesión actual, junto con lectura persistente de archivos desde el almacenamiento.'
+      },
+      {
+        category: 'Audio DSP & Ecualizador',
+        icon: Zap,
+        color: 'text-rose-400 bg-rose-400/10 border-rose-400/30',
+        title: 'Modos y Presets Identificados en MSEB',
+        desc: 'Indicación en cabecera del modo activo, check en preset seleccionado de MSEB y 10 iconos dedicados para cada control deslizante acústico.'
+      },
+      {
+        category: 'Diseño & Fluidez',
+        icon: Shield,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: '0 Retraso y Cabeceras Redondeadas',
+        desc: 'Transición instantánea de pestañas durante la reproducción musical, cabeceras redondeadas en todas las pantallas y sustitución total de emojis por iconos vectoriales.'
+      }
+    ]
+  },
+  {
+    version: 'v2.5.7',
+    tag: 'Estable',
+    isLatest: false,
     releaseDate: 'Septiembre 2026',
     summary: 'Identificación visual de modos y presets en Ecualizador DSP y MSEB, iconos para ajustes acústicos, 0 retraso al alternar pestañas en reproducción, cabeceras redondeadas en todas las pantallas y sustitución completa de emojis por iconos vectoriales.',
     highlights: [
@@ -207,7 +244,7 @@ const releaseHistory = [
 ]
 
 export default function VersionChangelog() {
-  const [activeVersion, setActiveVersion] = useState('v2.5.7')
+  const [activeVersion, setActiveVersion] = useState('v2.5.8')
 
   const current = releaseHistory.find((r) => r.version === activeVersion) || releaseHistory[0]
 
@@ -334,7 +371,7 @@ export default function VersionChangelog() {
                 <span>Compatibilidad probada desde Android 7.0 (Nougat) hasta Android 16</span>
               </div>
               <div className="font-mono text-slate-400">
-                Compilación: <span className="text-[#42A5F5]">release-v2.5.7-signed</span>
+                Compilación: <span className="text-[#42A5F5]">release-v2.5.8-signed</span>
               </div>
             </div>
 
