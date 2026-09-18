@@ -4,9 +4,46 @@ import { Sparkles, Zap, Shield, Radio, Music, MessageCircle, ChevronDown, CheckC
 
 const releaseHistory = [
   {
-    version: 'v2.5.8',
+    version: 'v2.5.9',
     tag: 'Última Versión',
     isLatest: true,
+    releaseDate: 'Septiembre 2026',
+    summary: 'Editor interactivo de fotos con recorte HD, zoom y rotación para avatar/portada; nueva opción para abrir menú al tocar carátula; auto-actualización continua con ContentObserver; reproducción completa de canciones WiFi con ID3 y auditoría de seguridad integral.',
+    highlights: [
+      {
+        category: 'Personalización & Perfil',
+        icon: Sparkles,
+        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
+        title: 'Recorte HD de Avatar y Portada',
+        desc: 'Herramienta interactiva con zoom, rotación de 90° y desplazamiento panorámico para fotos de perfil y banners, optimizada con compresión inteligente sin pérdida de nitidez.'
+      },
+      {
+        category: 'Reproductor & Biblioteca',
+        icon: Music,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: 'Auto-Actualización Continua',
+        desc: 'Detección en tiempo real de nuevas canciones añadidas o modificadas en el almacenamiento mediante ContentObserver del MediaStore sin necesidad de reinicios.'
+      },
+      {
+        category: 'Seguridad & Protección',
+        icon: Shield,
+        color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
+        title: 'Auditoría de Seguridad Certificada',
+        desc: 'Protección contra agotamiento de almacenamiento en WiFiTransferServer, escape DOM anti-XSS, verificación criptográfica SHA-256 de APK y aislamiento RLS total en Supabase.'
+      },
+      {
+        category: 'Ajustes & Controles',
+        icon: Zap,
+        color: 'text-rose-400 bg-rose-400/10 border-rose-400/30',
+        title: 'Acción al Tocar Carátula & Menú 3 Puntos',
+        desc: 'Nueva configuración para desplegar el menú de opciones de la pista al tocar la carátula principal, y corrección en el botón Restablecer del DSP.'
+      }
+    ]
+  },
+  {
+    version: 'v2.5.8',
+    tag: 'Estable',
+    isLatest: false,
     releaseDate: 'Septiembre 2026',
     summary: 'Soporte completo de escaneo e indexación en biblioteca para canciones transferidas por WiFi, contador en vivo de archivos pasados en la sesión, mejoras de persistencia y optimización general.',
     highlights: [
