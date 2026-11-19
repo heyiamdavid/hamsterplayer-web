@@ -8,7 +8,7 @@ const releaseHistory = [
     tag: 'Última Versión',
     isLatest: true,
     releaseDate: 'Noviembre 2026',
-    summary: 'Llamadas de voz individuales y grupales con soporte en pantalla bloqueada y sobre otras apps; audio de voz HD a 16.000 Hz; almacenamiento local con carga instantánea de chats y grupos (0 ms); editor de recorte de imagen adaptativo elevado; y protección total contra edición en mensajes del sistema.',
+    summary: 'Edición directa de metadatos desde el reproductor a pantalla completa; administración integral de grupos con edición de nombre/biografía y control de roles; llamadas de voz en pantalla bloqueada; audio HD a 16.000 Hz; y almacenamiento local de chats a 0 ms.',
     highlights: [
       {
         category: 'Llamadas & Comunicación',
@@ -35,8 +35,8 @@ const releaseHistory = [
         category: 'Diseño & Usabilidad',
         icon: Zap,
         color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
-        title: 'Recorte Adaptativo & Menú Grupal',
-        desc: 'Diálogo de recorte con botones elevados sobre la barra de navegación del sistema, menú contextual de tres puntos modernizado en grupos y ocultación automática de controles durante llamadas.'
+        title: 'Edición en Reproductor & Gestión de Grupos',
+        desc: 'Diálogo de edición de metadatos accesible desde el menú del reproductor a pantalla completa, modificación de nombre y biografía de grupo, y asignación de administradores desde la lista de integrantes.'
       }
     ]
   },
