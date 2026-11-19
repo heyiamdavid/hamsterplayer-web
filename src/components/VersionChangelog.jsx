@@ -8,7 +8,7 @@ const releaseHistory = [
     tag: 'Última Versión',
     isLatest: true,
     releaseDate: 'Noviembre 2026',
-    summary: 'Edición directa de metadatos desde el reproductor a pantalla completa; administración integral de grupos con edición de nombre/biografía y control de roles; llamadas de voz en pantalla bloqueada; audio HD a 16.000 Hz; y almacenamiento local de chats a 0 ms.',
+    summary: 'Fijar, archivar y silenciar conversaciones (chats directos y grupos con periodos de 8h, 1 semana o siempre); edición directa de metadatos desde el reproductor a pantalla completa; administración integral de grupos con edición y roles; llamadas de voz en pantalla bloqueada; audio HD a 16.000 Hz; y almacenamiento local de chats a 0 ms.',
     highlights: [
       {
         category: 'Llamadas & Comunicación',
@@ -32,11 +32,11 @@ const releaseHistory = [
         desc: 'Persistencia completa en el almacenamiento interno para conversaciones individuales y grupales. Lectura inmediata sin conexión y sincronización en segundo plano con Supabase.'
       },
       {
-        category: 'Diseño & Usabilidad',
+        category: 'Chats & Usabilidad',
         icon: Zap,
         color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
-        title: 'Edición en Reproductor & Gestión de Grupos',
-        desc: 'Diálogo de edición de metadatos accesible desde el menú del reproductor a pantalla completa, modificación de nombre y biografía de grupo, y asignación de administradores desde la lista de integrantes.'
+        title: 'Fijar, Archivar, Silenciar & Edición en Reproductor',
+        desc: 'Acciones rápidas en chats y grupos (fijar, archivar, silenciar notificaciones por 8h, 1 semana o siempre), edición de metadatos desde el reproductor a pantalla completa, y administración de miembros en grupos.'
       }
     ]
   },
