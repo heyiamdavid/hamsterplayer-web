@@ -4,9 +4,46 @@ import { Sparkles, Zap, Shield, Radio, Music, MessageCircle, ChevronDown, CheckC
 
 const releaseHistory = [
   {
-    version: 'v2.5.9',
+    version: 'v2.6.0',
     tag: 'Última Versión',
     isLatest: true,
+    releaseDate: 'Noviembre 2026',
+    summary: 'Llamadas de voz individuales y grupales con soporte en pantalla bloqueada y sobre otras apps; audio de voz HD a 16.000 Hz; almacenamiento local con carga instantánea de chats y grupos (0 ms); editor de recorte de imagen adaptativo elevado; y protección total contra edición en mensajes del sistema.',
+    highlights: [
+      {
+        category: 'Llamadas & Comunicación',
+        icon: Radio,
+        color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
+        title: 'Llamadas Entrantes en Pantalla Completa',
+        desc: 'Aviso visual prioritario sobre la pantalla bloqueada y sobre cualquier otra aplicación con contestación directa, servicio en segundo plano sin cortes y reconexión instantánea al abrir la app.'
+      },
+      {
+        category: 'Voz VoIP & Calidad HD',
+        icon: Sparkles,
+        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
+        title: 'Voz HD de Alta Fidelidad a 16.000 Hz',
+        desc: 'Muestreo de voz a 16 kHz para llamadas individuales y grupales, eliminando estática y ruidos de fondo. Detección instantánea de participantes y mezcla fluida en salas grupales.'
+      },
+      {
+        category: 'Chats & Persistencia Local',
+        icon: MessageCircle,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: 'Caché Local Instantánea (0 ms)',
+        desc: 'Persistencia completa en el almacenamiento interno para conversaciones individuales y grupales. Lectura inmediata sin conexión y sincronización en segundo plano con Supabase.'
+      },
+      {
+        category: 'Diseño & Usabilidad',
+        icon: Zap,
+        color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
+        title: 'Recorte Adaptativo & Menú Grupal',
+        desc: 'Diálogo de recorte con botones elevados sobre la barra de navegación del sistema, menú contextual de tres puntos modernizado en grupos y ocultación automática de controles durante llamadas.'
+      }
+    ]
+  },
+  {
+    version: 'v2.5.9',
+    tag: 'Estable',
+    isLatest: false,
     releaseDate: 'Septiembre 2026',
     summary: 'Editor interactivo de fotos con recorte HD, zoom y rotación para avatar/portada; nueva opción para abrir menú al tocar carátula; auto-actualización continua con ContentObserver; reproducción completa de canciones WiFi con ID3 y auditoría de seguridad integral.',
     highlights: [
@@ -281,7 +318,7 @@ const releaseHistory = [
 ]
 
 export default function VersionChangelog() {
-  const [activeVersion, setActiveVersion] = useState('v2.5.8')
+  const [activeVersion, setActiveVersion] = useState('v2.6.0')
 
   const current = releaseHistory.find((r) => r.version === activeVersion) || releaseHistory[0]
 
@@ -408,7 +445,7 @@ export default function VersionChangelog() {
                 <span>Compatibilidad probada desde Android 7.0 (Nougat) hasta Android 16</span>
               </div>
               <div className="font-mono text-slate-400">
-                Compilación: <span className="text-[#42A5F5]">release-v2.5.8-signed</span>
+                Compilación: <span className="text-[#42A5F5]">release-v2.6.0-signed</span>
               </div>
             </div>
 

@@ -19,7 +19,7 @@ export default function Footer() {
             HamsterPlayer
           </span>
           <span className="text-xs font-mono text-slate-400">
-            v2.5.4
+            v2.6.0
           </span>
         </div>
 
