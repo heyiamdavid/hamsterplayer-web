@@ -8,35 +8,35 @@ const releaseHistory = [
     tag: 'Última Versión',
     isLatest: true,
     releaseDate: 'Noviembre 2026',
-    summary: 'Fijar, archivar y silenciar conversaciones (chats directos y grupos con periodos de 8h, 1 semana o siempre); edición directa de metadatos desde el reproductor a pantalla completa; administración integral de grupos con edición y roles; llamadas de voz en pantalla bloqueada; audio HD a 16.000 Hz; y almacenamiento local de chats a 0 ms.',
+    summary: 'Sensor de proximidad que apaga la pantalla al acercar el teléfono a la oreja en llamadas; copia múltiple de mensajes; reproducción directa de música en chat con validación de biblioteca local; sincronización en segundo plano de llamadas y mensajes; indicador fijo de descarga de actualizaciones; fijar, archivar y silenciar conversaciones; y administración integral de grupos.',
     highlights: [
       {
-        category: 'Llamadas & Comunicación',
+        category: 'Llamadas & Sensor de Proximidad',
         icon: Radio,
         color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
-        title: 'Llamadas Entrantes en Pantalla Completa',
-        desc: 'Aviso visual prioritario sobre la pantalla bloqueada y sobre cualquier otra aplicación con contestación directa, servicio en segundo plano sin cortes y reconexión instantánea al abrir la app.'
+        title: 'Sensor de Proximidad y Audio Conmutable',
+        desc: 'La pantalla se oscurece automáticamente al acercar el teléfono a la oreja para evitar toques accidentales con la mejilla, con enrutamiento de altavoz y auricular fiable en todo tipo de dispositivos.'
       },
       {
-        category: 'Voz VoIP & Calidad HD',
-        icon: Sparkles,
-        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
-        title: 'Voz HD de Alta Fidelidad a 16.000 Hz',
-        desc: 'Muestreo de voz a 16 kHz para llamadas individuales y grupales, eliminando estática y ruidos de fondo. Detección instantánea de participantes y mezcla fluida en salas grupales.'
-      },
-      {
-        category: 'Chats & Persistencia Local',
+        category: 'Mensajería & Productividad',
         icon: MessageCircle,
         color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
-        title: 'Caché Local Instantánea (0 ms)',
-        desc: 'Persistencia completa en el almacenamiento interno para conversaciones individuales y grupales. Lectura inmediata sin conexión y sincronización en segundo plano con Supabase.'
+        title: 'Copia Múltiple & Música en el Chat',
+        desc: 'Selecciona varios mensajes a la vez para copiarlos en bloque al portapapeles. Además, las canciones compartidas se reproducen al instante buscando coincidencias en tu biblioteca local.'
       },
       {
-        category: 'Chats & Usabilidad',
+        category: 'Notificaciones en Segundo Plano',
+        icon: Sparkles,
+        color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
+        title: 'Sincronización en Tiempo Real Continua',
+        desc: 'Recepción constante de llamadas entrantes, mensajes de chat y solicitudes de amistad aun cuando la app esté minimizada o con el teléfono en reposo.'
+      },
+      {
+        category: 'Actualizaciones & Grupos',
         icon: Zap,
         color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
-        title: 'Fijar, Archivar, Silenciar & Edición en Reproductor',
-        desc: 'Acciones rápidas en chats y grupos (fijar, archivar, silenciar notificaciones por 8h, 1 semana o siempre), edición de metadatos desde el reproductor a pantalla completa, y administración de miembros en grupos.'
+        title: 'Descarga con Progreso Visible & Gestión de Grupos',
+        desc: 'Indicador de porcentaje y megabytes fijo en pantalla durante descargas de actualización, apertura directa de chats desde amigos y administración completa de grupos.'
       }
     ]
   },
