@@ -8,35 +8,35 @@ const releaseHistory = [
     tag: 'Última Versión',
     isLatest: true,
     releaseDate: 'Noviembre 2026',
-    summary: 'Sensor de proximidad que apaga la pantalla al acercar el teléfono a la oreja en llamadas; copia múltiple de mensajes; reproducción directa de música en chat con validación de biblioteca local; sincronización en segundo plano de llamadas y mensajes; indicador fijo de descarga de actualizaciones; fijar, archivar y silenciar conversaciones; y administración integral de grupos.',
+    summary: 'Pantalla inmediata de llamada saliente con tono de espera y prevención de llamadas acumuladas; recepción de llamada unificada sin pantallas duplicadas; servicio persistente en segundo plano para recibir llamadas y notificaciones con la app cerrada; carga instantánea de mensajes en tiempo real; sensor de proximidad en llamadas; copia múltiple de mensajes; y reproducción directa de canciones en el chat.',
     highlights: [
       {
-        category: 'Llamadas & Sensor de Proximidad',
+        category: 'Llamadas Salientes & Entrantes',
         icon: Radio,
         color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
-        title: 'Sensor de Proximidad y Audio Conmutable',
-        desc: 'La pantalla se oscurece automáticamente al acercar el teléfono a la oreja para evitar toques accidentales con la mejilla, con enrutamiento de altavoz y auricular fiable en todo tipo de dispositivos.'
+        title: 'Llamadas Inmediatas & Recepción Unificada',
+        desc: 'Pantalla de llamada saliente instantánea al marcar con prevención contra llamadas duplicadas o accidentales. Dentro de la app se muestra una única pantalla limpia y notificación nativa estilizada.'
       },
       {
-        category: 'Mensajería & Productividad',
-        icon: MessageCircle,
-        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
-        title: 'Copia Múltiple & Música en el Chat',
-        desc: 'Selecciona varios mensajes a la vez para copiarlos en bloque al portapapeles. Además, las canciones compartidas se reproducen al instante buscando coincidencias en tu biblioteca local.'
-      },
-      {
-        category: 'Notificaciones en Segundo Plano',
+        category: 'Segundo Plano & Tiempo Real',
         icon: Sparkles,
         color: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
-        title: 'Sincronización en Tiempo Real Continua',
-        desc: 'Recepción constante de llamadas entrantes, mensajes de chat y solicitudes de amistad aun cuando la app esté minimizada o con el teléfono en reposo.'
+        title: 'Servicio Persistente 24/7 Fuera de la App',
+        desc: 'Llegada garantizada de llamadas de voz y notificaciones de mensajes aun con la aplicación cerrada o el teléfono con la pantalla bloqueada, con activación inmediata de pantalla.'
       },
       {
-        category: 'Actualizaciones & Grupos',
+        category: 'Mensajería & Carga Rápida',
+        icon: MessageCircle,
+        color: 'text-[#42A5F5] bg-[#42A5F5]/10 border-[#42A5F5]/30',
+        title: 'Mensajes en Tiempo Real & Copia Múltiple',
+        desc: 'Carga instantánea de mensajes sin demoras artificiales, selección múltiple para copiar mensajes al portapapeles y reproducción de canciones compartidas en tu biblioteca local.'
+      },
+      {
+        category: 'Hardware & Sensor de Proximidad',
         icon: Zap,
         color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30',
-        title: 'Descarga con Progreso Visible & Gestión de Grupos',
-        desc: 'Indicador de porcentaje y megabytes fijo en pantalla durante descargas de actualización, apertura directa de chats desde amigos y administración completa de grupos.'
+        title: 'Sensor de Proximidad y Audio Conmutable',
+        desc: 'La pantalla se apaga automáticamente al colocarte el teléfono en la oreja sin altavoz, con enrutamiento de audio estable y barra de progreso fija en descargas de actualizaciones.'
       }
     ]
   },
